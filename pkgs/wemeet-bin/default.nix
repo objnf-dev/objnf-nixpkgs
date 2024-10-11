@@ -63,7 +63,7 @@ let
 
     src = fetchurl {
       url = "https://updatecdn.meeting.qq.com/cos/fb7464ffb18b94a06868265bed984007/TencentMeeting_0300000000_${version}_x86_64_default.publish.officialwebsite.deb";
-      hash = "sha256-0hg63zhzb7nxlkswpn1lfb1crrd1zw6c6p2dnrqq17nrxbi9q89x";
+      hash = "sha256-PSGc4urZnoBxtk1cwwz/oeXMwnI02Mv1pN2e9eEf5kE=";
     };
 
     nativeBuildInputs = [
