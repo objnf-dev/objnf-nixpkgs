@@ -1,4 +1,4 @@
-// 参考自 https://github.com/nix-community/nur-combined/blob/master/repos/novel2430/pkgs/wemeet-bin-bwrap/default.nix
+# 参考自 https://github.com/nix-community/nur-combined/blob/master/repos/novel2430/pkgs/wemeet-bin-bwrap/default.nix
 {
   stdenv,
   lib,
