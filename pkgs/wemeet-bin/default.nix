@@ -24,7 +24,9 @@
   wayland,
   nss,
   curl,
-  systemdLibs
+  systemdLibs,
+  freetype,
+  fontconfig
 }:
 let
   libraries = [
@@ -42,6 +44,10 @@ let
     xorg.libXrandr
     libyuv
     openssl
+    xorg.libSM
+    xorg.libICE
+    freetype
+    fontconfig
     # libsForQt5.qt5.qtbase
     # libsForQt5.qt5.qtdeclarative
     # libsForQt5.qt5.qtsvg
