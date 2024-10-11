@@ -28,7 +28,6 @@ let
     xorg.libXfixes
     xorg.libXinerama
     xorg.libXrandr
-    libyuv
     openssl
     libsForQt5.qt5.qtbase
     libsForQt5.qt5.qtdeclarative
