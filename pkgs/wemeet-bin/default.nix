@@ -42,13 +42,13 @@ let
     xorg.libXrandr
     libyuv
     openssl
-    libsForQt5.qt5.qtbase
-    libsForQt5.qt5.qtdeclarative
-    libsForQt5.qt5.qtsvg
-    libsForQt5.qt5.qtwebchannel
-    libsForQt5.qt5.qtwebengine
-    libsForQt5.qt5.qtx11extras
-    libsForQt5.qt5.qtwayland
+    # libsForQt5.qt5.qtbase
+    # libsForQt5.qt5.qtdeclarative
+    # libsForQt5.qt5.qtsvg
+    # libsForQt5.qt5.qtwebchannel
+    # libsForQt5.qt5.qtwebengine
+    # libsForQt5.qt5.qtx11extras
+    # libsForQt5.qt5.qtwayland
     zlib
     wayland
     systemdLibs
