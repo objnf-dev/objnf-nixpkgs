@@ -26,7 +26,10 @@
   curl,
   systemdLibs,
   freetype,
-  fontconfig
+  fontconfig,
+  harfbuzz,
+  libunwind,
+  libdrm
 }:
 let
   libraries = [
@@ -42,12 +45,16 @@ let
     xorg.libXfixes
     xorg.libXinerama
     xorg.libXrandr
+    xorg.libXtst
     libyuv
     openssl
     xorg.libSM
     xorg.libICE
     freetype
     fontconfig
+    harfbuzz
+    libunwind
+    libdrm
     # libsForQt5.qt5.qtbase
     # libsForQt5.qt5.qtdeclarative
     # libsForQt5.qt5.qtsvg
