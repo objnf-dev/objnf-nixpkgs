@@ -1,18 +1,30 @@
-# 参考自 https://github.com/nix-community/nur-combined/blob/master/repos/novel2430/pkgs/wemeet-bin-bwrap/default.nix
-{ stdenv, lib, autoPatchelfHook, fetchurl , buildFHSUserEnvBubblewrap, writeShellScript, makeWrapper, copyDesktopItems, makeDesktopItem
-, dpkg
-, alsa-lib
-, libgcc
-, glibc
-, libglvnd
-, libpulseaudio
-, xorg
-, openssl
-, libsForQt5
-, zlib
-, wayland
-, nss
-, curl
+// 参考自 https://github.com/nix-community/nur-combined/blob/master/repos/novel2430/pkgs/wemeet-bin-bwrap/default.nix
+{
+  stdenv,
+  lib,
+  autoPatchelfHook,
+  fetchurl,
+  buildFHSUserEnvBubblewrap,
+  writeShellScript,
+  makeWrapper,
+  copyDesktopItems,
+  makeDesktopItem,
+
+  dpkg,
+  alsa-lib,
+  libgcc,
+  glibc,
+  libglvnd,
+  libpulseaudio,
+  xorg,
+  libyuv,
+  openssl,
+  libsForQt5,
+  zlib,
+  wayland,
+  nss,
+  curl,
+  systemdLibs
 }:
 let
   libraries = [
@@ -28,6 +40,7 @@ let
     xorg.libXfixes
     xorg.libXinerama
     xorg.libXrandr
+    libyuv
     openssl
     libsForQt5.qt5.qtbase
     libsForQt5.qt5.qtdeclarative
@@ -61,7 +74,7 @@ let
 
     unpackCmd = "dpkg -x $src .";
     sourceRoot = ".";
-    
+
     dontWrapQtApps = true;
 
     installPhase = ''
@@ -81,11 +94,11 @@ let
   '';
   fhs = buildFHSUserEnvBubblewrap {
     name = "${pkg-name}";
-    targetPkgs = 
+    targetPkgs =
       pkgs: [
         wemeet-src
-      ] 
-      ++ 
+      ]
+      ++
       libraries;
     runScript = startScript;
     extraBwrapArgs = [
